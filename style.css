@@ -1,11 +1,14 @@
-*{
-  /*font-family: Tahoma, Geneva, sans-serif;*/
-}
 body{
   background-color: #E7E9ED;
   margin: 30px;
 }
 
+h6{
+  font-size: 12px;
+  font-weight: bold;
+  font-family: inherit;
+  color:rgb(54, 88, 153);
+}
 
 .navbar{
   background-color: #3b5998;
@@ -24,13 +27,13 @@ body{
 
 .navbar .navbar-brand img{
   height: 25px;
+  position: absolute;
+  left: -100px;
 }
 
 .navbar-form{
   margin-top: 12px;
   margin-bottom: 5px;
-  position: relative;
-  left: 90px;
 }
 
 .navbar-form input{
@@ -61,15 +64,106 @@ body{
   font-size: 20px;
 }
 
-.glyphicon-globe{
-  background-color: #3b5998;
+.nav-items{
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.nav-items:hover{
+  padding-top: 15px;
+  padding-bottom: 7px;
+}
+
+.glyphicon-picture{
+  background-color: #70ba37;
   padding: 5px;
   border-radius: 100px;
   color: White;
 }
 
-.glyphicon-picture{
-  background-color: #70ba37;
+.hr2{
+  position: relative;
+  top: -20px;
+}
+
+.comment1{
+  position: relative;
+  top: -45px;
+  width: 513px;
+  height: 120px;
+  background-color: #f6f7f9;
+}
+.comment1 img{
+  border: 0px solid transparent;
+  margin: 15px;
+  margin-right: 5px;
+  padding: 0px;
+  border-radius: 0px;
+}
+
+.x{
+  width: 80%;
+  display: inline-block;
+  font-size: 12px;
+  position: relative;
+  top:-10px;
+}
+
+.x p{
+  display: block;
+  font-size: 12px;
+  position: relative;
+  line-height: 1em;
+  margin: 0px;
+  top: 23px;
+}
+
+.content{
+  margin-left: 15px;
+  width: 80%;
+}
+.like-reply{
+    word-spacing: 2em;
+}
+
+
+.LCS2 li{
+  display: inline;
+}
+
+.LCS2{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: Grey;
+    margin-top: -10px;
+    margin-bottom: 0px;
+    padding-left: 20px;
+}
+
+.comment-form2{
+  position: relative;
+  top: -15px;
+}
+
+.comment-form2 img{
+  border: 0px solid transparent;
+  margin: 15px;
+  margin-right: 0px;
+  padding: 0px;
+  border-radius: 0px;
+}
+
+.comment-form2 input{
+  display: inline;
+  width: 435px;
+  margin-left: 5px;
+  border-radius: 0px;
+  height: 35px;
+}
+
+#globe{
+  background-color: #3b5998;
   padding: 5px;
   border-radius: 100px;
   color: White;
@@ -93,7 +187,6 @@ body{
 
 #main{
   margin-top: 45px;
-  margin-left: 100px;
 }
 
 #cover{
@@ -106,16 +199,17 @@ body{
 }
 
 #profile-image{
-   position: relative;
+   position: absolute;
    top: -180px;
    width: 200px;
-   left: 20px;
+   left: 25px;
    z-index: 10;
  }
 
 #profile-name{
-  position: relative;
-  top: -70px;
+  position: absolute;
+  top: 230px;
+  left: 250px;
 }
 #profile-name h1{
   text-shadow: 0 0 3px rgba(0,0,0,0.8);
@@ -127,16 +221,13 @@ body{
 #profile-buttons{
   position: relative;
   top: -50px;
-}
-
-#profile-buttons button{
-  /*margin-right: 10px;*/
+  left: 400px;
 }
 
 #extra-links{
-  position: relative;
-  top: -200px;
-  left: 15px;
+  position: absolute;
+  top: 300px;
+  left: 30px;
   background-color: White;
   width: 900px;
   height: 36px;
@@ -187,8 +278,6 @@ body{
   background-color: White;
   width: auto;
   height: 150px;
-  position: relative;
-  top: -198px;
   border-radius: 2px;
   font-size: 12px;
 }
@@ -217,10 +306,9 @@ body{
 
 #left-side-photos{
   background-color: White;
-  height: 420px;
+  height: 400px;
   width: auto;
-  position: relative;
-  top: -200px;
+  padding: 0px;
 }
 
 #left-side-photos h3{
@@ -230,25 +318,25 @@ body{
   padding: 10px;
 }
 
-#left-side-photos #a{
+#left-side-photos #a, #d, #g{
   padding-right: 0px;
   padding-left: 0px;
   position: relative;
-  left: 18px;
+  left: 22px;
 }
 
-#left-side-photos #b{
+#left-side-photos #b, #e, #h{
   padding-right: 0px;
   padding-left: 0px;
   position: relative;
-  left: 5px;
+  left: 9px;
 }
 
-#left-side-photos #c{
+#left-side-photos #c, #f, #i{
   padding-right: 0px;
   padding-left: 0px;
   position: relative;
-  right: 8px;
+  right: 5px;
 }
 
 #left-side-photos img{
@@ -259,8 +347,6 @@ body{
   background-color: White;
   height: 420px;
   width: auto;
-  position: relative;
-  top: -200px;
 }
 
 #left-side-friends h3{
@@ -270,21 +356,21 @@ body{
   padding: 10px;
 }
 
-#left-side-friends #a, #d{
+#left-side-friends #j, #m, #p{
   padding-right: 0px;
   padding-left: 0px;
   position: relative;
   left: 18px;
 }
 
-#left-side-friends #b, #e{
+#left-side-friends #k, #n, #q{
   padding-right: 0px;
   padding-left: 0px;
   position: relative;
   left: 5px;
 }
 
-#left-side-friends #c, #f{
+#left-side-friends #l, #o, #r{
   padding-right: 0px;
   padding-left: 0px;
   position: relative;
@@ -300,14 +386,10 @@ body{
   background-color: White;
   width: auto;
   height: 150px;
-  position: relative;
-  top: -180px;
   border-radius: 4px;
 }
 
 #post-form{
-  position: relative;
-  top: 0px;
   border-radius: 0px;
   resize: none;
 }
@@ -316,6 +398,7 @@ body{
   background-color: #f6f7f9;
   font-size: 12px;
   font-weight: bold;
+  margin-top: 20px;
 }
 
 #fb-post-tab a{
@@ -345,7 +428,6 @@ body{
   border-color: #4267b2;
   color: White;
   margin: 5px;
-  position: relative;
   float: right;
   width: 60px;
   letter-spacing: 1px;
@@ -366,9 +448,7 @@ body{
   background-color: White;
   height: 550px;
   width: auto;
-  position: relative;
-  top: 20px;
-
+  margin-top: 20px;
 }
 
 #post-thumb{
@@ -380,7 +460,7 @@ body{
   display: inline;
   font-size: 16px;
   position: relative;
-  top: -12px;
+  top: -9px;
   margin-left: -5px;
 }
 
@@ -391,13 +471,13 @@ body{
   top: -30px;
   left: 81px;
   margin-top: 5px;
-  margin-left: -5px;
+  margin-left: -12px;
 }
 
 #post1 hr{
   border-color: LightGrey;
   position: relative;
-  top: -50px;
+  top: -55px;
   width: 485px;
 }
 
@@ -406,6 +486,7 @@ body{
   margin: 10px;
   position: relative;
   top: -30px;
+  width: 493px;
 }
 
 #LCS li{
@@ -431,50 +512,15 @@ body{
   font-size: 12px;
 }
 
-#comments p{
+#whoLiked{
   display: inline;
 }
 
-#comments #hr2{
-  position: relative;
-  top: -20px;
-}
-
-#comment1{
-  position: relative;
-  top: -45px;
-}
-#comment1 img{
-  border: 0px solid transparent;
-  margin: 15px;
-  margin-right: 5px;
-  padding: 0px;
-  border-radius: 0px;
-}
-
-#x{
-  width: 80%;
-  display: inline-block;
-  font-size: 12px;
-  position: relative;
-  top: 14px;
-}
-
-#x p{
-  display: block;
-  font-size: 12px;
-  position: relative;
-  line-height: 1em;
-  margin: 0px;
-}
-
-#like-reply a{
-    word-spacing: 2em;
-}
 
 #comment2{
-  position: relative;
-  top: -60px;
+  position: absolute;
+  width: 80%;
+  top: 80px;
 }
 #comment2 img{
   border: 0px solid transparent;
@@ -486,7 +532,7 @@ body{
 
 #comment-form{
   position: relative;
-  top: -75px
+  top: -60px
 }
 
 #comment-form img{
@@ -507,4 +553,120 @@ body{
 
 #comment-btns{
     display: block;
+}
+
+#post2{
+  background-color: White;
+  height: 180px;
+  width: auto;
+  position: relative;
+  top: 220px;
+  margin-bottom: 100px;
+}
+
+#post2 h2{
+  display: inline;
+  font-size: 16px;
+  position: absolute;
+  left: 75px;
+  width: 80%;
+  top: -8px;
+  line-height: 2em;
+}
+
+#post2 small{
+  display: block;
+  font-size: 14px;
+}
+
+#post2 hr{
+  border-color: LightGrey;
+  width: 485px;
+}
+
+#post-thumb2{
+  border: 0px solid transparent;
+  margin: 10px;
+  position: relative;
+  left: -345px;
+}
+
+#commentsP2{
+  background-color: #f6f7f9;
+  margin-top: 10px;
+  width: 513px;
+  height: 35px;
+  font-size: 12px;
+}
+
+#commentsP2 p{
+  display: inline;
+  font-size: 12px;
+  margin: 0px;
+}
+
+
+#post3{
+  background-color: White;
+  height: 185px;
+  width: auto;
+  position: relative;
+  top: 270px;
+}
+
+#post3 h2{
+  display: inline;
+  font-size: 16px;
+  position: absolute;
+  width: 80%;
+  left: 75px;
+  top: -10px;
+  line-height: 2em;
+}
+
+#post3 small{
+  display: block;
+  font-size: 14px;
+}
+
+#commentsP3{
+  background-color: #f6f7f9;
+  margin-top: 5px;
+  width: 513px;
+  height: 35px;
+  font-size: 12px;
+}
+
+#commentsP3 p{
+  display: inline;
+  font-size: 12px;
+  margin: 0px;
+}
+
+#promos {
+    float: left;
+    width: 250px;
+    position: fixed;
+    left: 1220px;
+    top: 50px;
+}
+
+#sponsored{
+  color: #666;
+  font-size: 12px;
+  font-family: inherit;
+  text-align: left;
+  font-weight: bold;
+}
+
+#ad-pic{
+  padding: 0px;
+  border-radius: 0px;
+}
+
+#ad-writing{
+  width: 160px;
+  font-size: 11px;
+  font-family: inherit;
+  margin-top: 10px;
 }

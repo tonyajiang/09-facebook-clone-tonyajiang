@@ -3,10 +3,11 @@
 <head>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel = "stylesheet" type = "text/css" href = "style.css">
+  <link rel = "stylesheet" type = "text/css" href = "style.css">
   <title>Facebook Clone</title>
 </head>
 <body>
+  <!-- fixed header at the top of the page for navigation -->
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="container-fixed">
@@ -24,30 +25,30 @@
           </button>
         </form>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Tonya</a></li>
-          <li><a href="#">Home</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-comment"></span></a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-globe"></span></a></li>
+          <li><a href="#" class="nav-items">Tonya</a></li>
+          <li><a href="#" class="nav-items">Home</a></li>
+          <li ><a href="#" class="nav-items"><span class="glyphicon glyphicon-user"></span></a></li>
+          <li><a href="#" class="nav-items"><span class="glyphicon glyphicon-comment"></span></a></li>
+          <li><a href="#" class="nav-items"><span class="glyphicon glyphicon-globe"></span></a></li>
         </ul>
       </div>
     </div>
 </nav>
 
-<!-- Cover photo -->
 <div class="container-fixed" id="main">
   <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
+      <!-- Cover photo -->
       <div id="cover">
-        <img src="http:placehold.it/900x300" id="cover-image">
+        <img src="cover.jpg" height="300px" width="900px" id="cover-image">
         <!-- Profile photo, name buttons -->
-        <div class="row">
+        <div class="row" id="cover-misc">
           <div class="col-md-3">
-            <img src="http:placehold.it/200" alt="..." class="img-thumbnail" id="profile-image">
+            <img src="profile-pic.jpg" width="200px" height="200px" alt="..." class="img-thumbnail" id="profile-image">
           </div>
           <div class="col-md-5" id="profile-name">
-            <h1>Name</h1>
+            <h1>Tonya Jiang</h1>
           </div>
           <div class="col-md-4" id="profile-buttons">
             <button type="button" class="btn btn-default btn-sm"><b>Update Info</b></button>
@@ -58,172 +59,252 @@
           </div>
         </div>
         <!-- Sub-nav -->
-            <div class="row" id="extra-links">
-              <div class="col-md-8">
-                <div class="btn-group btn-group-justified" role="group" id="second-menu">
-                  <div class="btn-group btn-group-lg" role="group">
-                    <button type="button" class="btn btn-default" id="xbtna"><p>Timeline</p></button>
-                  </div>
-                  <div class="btn-group btn-group-lg" role="group">
-                    <button type="button" class="btn btn-default" id="xbtnb"><p>About</p></button>
-                  </div>
-                  <div class="btn-group btn-group-lg" role="group">
-                    <button type="button" class="btn btn-default" id="xbtnc"><p>Friends</p></button>
-                  </div>
-                  <div class="btn-group btn-group-lg" role="group">
-                    <button type="button" class="btn btn-default" id="xbtnd"><p>Photos</p></button>
-                  </div>
-                  <div class="btn-group btn-group-lg" role="group">
-                    <button type="button" class="btn btn-default" id="xbtne"><p>More</p></button>
-                  </div>
+        <div class="row" id="extra-links">
+          <div class="col-md-8">
+            <div class="btn-group btn-group-justified" role="group" id="second-menu">
+              <div class="btn-group btn-group-lg" role="group">
+                <button type="button" class="btn btn-default" id="xbtna"><p>Timeline</p></button>
+              </div>
+              <div class="btn-group btn-group-lg" role="group">
+                <button type="button" class="btn btn-default" id="xbtnb"><p>About</p></button>
+              </div>
+              <div class="btn-group btn-group-lg" role="group">
+                <button type="button" class="btn btn-default" id="xbtnc"><p>Friends</p></button>
+              </div>
+              <div class="btn-group btn-group-lg" role="group">
+                <button type="button" class="btn btn-default" id="xbtnd"><p>Photos</p></button>
+              </div>
+              <div class="btn-group btn-group-lg" role="group">
+                <button type="button" class="btn btn-default" id="xbtne"><p>More</p></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+              <!-- Left hand info -->
+            <div id="left-side-intro">
+              <h3><span class="glyphicon glyphicon-globe" id= "globe" aria-hidden="true"></span> Intro</h3>
+              <ul>
+                <li><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Lives in <a href="#">Londonderry, New Hampshire</a></li>
+                <li><span class="glyphicon glyphicon-education" aria-hidden="true"></span> Studies Computer Science at <a href="#">Washington University in St. Louis</a></li>
+              </ul>
+            </div>
+            <!-- 3x3 grid of recent photos -->
+            <div id="left-side-photos">
+              <h3><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Photos</h3>
+              <div class="row">
+                <div class="col-md-4"  id="a">
+                  <img src="1.jpg" width="110" height="110" alt="picture 1" class="img-thumbnail">
+                </div>
+                <div class="col-md-4"  id="b">
+                  <img src="2.jpg" width="110" height="110" alt="picture 2" class="img-thumbnail">
+                </div>
+                <div class="col-md-4"  id="c">
+                  <img src="3.jpg" width="110" height="110" alt="picture 3" class="img-thumbnail">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4"  id="d">
+                  <img src="4.jpg" width="110" height="110" alt="picture 4" class="img-thumbnail">
+                </div>
+                <div class="col-md-4"  id="e">
+                  <img src="5.jpg" width="110" height="110" alt="picture 5" class="img-thumbnail">
+                </div>
+                <div class="col-md-4"  id="f">
+                  <img src="6.jpg" width="110" height="110" alt="picture 6" class="img-thumbnail">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4"  id="g">
+                  <img src="7.jpg" width="110" height="110" alt="picture 7" class="img-thumbnail">
+                </div>
+                <div class="col-md-4"  id="h">
+                  <img src="8.jpg" width="110" height="110" alt="picture 8" class="img-thumbnail">
+                </div>
+                <div class="col-md-4"  id="i">
+                  <img src="9.jpg" width="110" height="110" alt="picture 9" class="img-thumbnail">
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-5">
-                <div id="left-side-intro">
-                  <h3><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Intro</h3>
-                  <ul>
-                    <li><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Lives in <a href="#">Londonderry, New Hampshire</a></li>
-                    <li><span class="glyphicon glyphicon-education" aria-hidden="true"></span> Studies Computer Science at <a href="#">Washington University in St. Louis</a></li>
-                  </ul>
+            <!-- 3x3 grid of recent or important friends -->
+            <div id="left-side-friends">
+              <h3><span class="glyphicon glyphicon-user" aria-hidden="true" id="left"></span> Friends</h3>
+              <div class="row">
+                <div class="col-md-4"  id="j">
+                  <img src="f1.jpg" width="115" height="110" alt="friend 1" class="img-thumbnail">
                 </div>
-                <div id="left-side-photos">
-                  <h3><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Photos</h3>
-                  <div class="row">
-                    <div class="col-md-4"  id="a">
-                      <img src="http:placehold.it/110" alt="..." class="img-thumbnail">
-                    </div>
-                    <div class="col-md-4"  id="b">
-                      <img src="http:placehold.it/110" alt="..." class="img-thumbnail">
-                    </div>
-                    <div class="col-md-4"  id="c">
-                      <img src="http:placehold.it/110" alt="..." class="img-thumbnail">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-4"  id="d">
-                      <img src="http:placehold.it/110" alt="..." class="img-thumbnail">
-                    </div>
-                    <div class="col-md-4"  id="e">
-                      <img src="http:placehold.it/110" alt="..." class="img-thumbnail">
-                    </div>
-                    <div class="col-md-4"  id="f">
-                      <img src="http:placehold.it/110" alt="..." class="img-thumbnail">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-4"  id="a">
-                      <img src="http:placehold.it/110" alt="..." class="img-thumbnail">
-                    </div>
-                    <div class="col-md-4"  id="b">
-                      <img src="http:placehold.it/110" alt="..." class="img-thumbnail">
-                    </div>
-                    <div class="col-md-4"  id="c">
-                      <img src="http:placehold.it/110" alt="..." class="img-thumbnail">
-                    </div>
-                  </div>
+                <div class="col-md-4"  id="k">
+                  <img src="f2.jpg" width="115" height="110" alt="friend 2" class="img-thumbnail">
                 </div>
-                <div id="left-side-friends">
-                  <h3><span class="glyphicon glyphicon-user" aria-hidden="true" id="left"></span> Friends</h3>
-                  <div class="row">
-                    <div class="col-md-4"  id="a">
-                      <img src="http:placehold.it/110" alt="..." class="img-thumbnail">
-                    </div>
-                    <div class="col-md-4"  id="b">
-                      <img src="http:placehold.it/110" alt="..." class="img-thumbnail">
-                    </div>
-                    <div class="col-md-4"  id="c">
-                      <img src="http:placehold.it/110" alt="..." class="img-thumbnail">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-4"  id="a">
-                      <img src="http:placehold.it/110" alt="..." class="img-thumbnail">
-                    </div>
-                    <div class="col-md-4"  id="b">
-                      <img src="http:placehold.it/110" alt="..." class="img-thumbnail">
-                    </div>
-                    <div class="col-md-4"  id="c">
-                      <img src="http:placehold.it/110" alt="..." class="img-thumbnail">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-4"  id="a">
-                      <img src="http:placehold.it/110" alt="..." class="img-thumbnail">
-                    </div>
-                    <div class="col-md-4"  id="b">
-                      <img src="http:placehold.it/110" alt="..." class="img-thumbnail">
-                    </div>
-                    <div class="col-md-4"  id="c">
-                      <img src="http:placehold.it/110" alt="..." class="img-thumbnail">
-                    </div>
-                  </div>
+                <div class="col-md-4"  id="l">
+                  <img src="f3.jpg" width="115" height="110" alt="friend 3" class="img-thumbnail">
                 </div>
               </div>
-              <div class="col-md-7">
-                <div id="right-side">
-                  <ul class="nav nav-tabs" id="fb-post-tab">
-                    <li role="presentation" class="active"><a href="#"  id="first"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Status</a></li>
-                    <li role="presentation"><a href="#"><span class="glyphicon glyphicon-camera" aria-hidden="true"></span> Photo/Video</a></li>
-                    <li role="presentation"><a href="#"><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Life Event</a></li>
+              <div class="row">
+                <div class="col-md-4"  id="m">
+                  <img src="f4.jpg" width="115" height="110" alt="friend 4" class="img-thumbnail">
+                </div>
+                <div class="col-md-4"  id="n">
+                  <img src="f5.jpg" width="115" height="110" alt="friend 5" class="img-thumbnail">
+                </div>
+                <div class="col-md-4"  id="o">
+                  <img src="f6.jpg" width="115" height="110" alt="friend 6" class="img-thumbnail">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4"  id="p">
+                  <img src="f7.jpg" width="115" height="110" alt="friend 7" class="img-thumbnail">
+                </div>
+                <div class="col-md-4"  id="q">
+                  <img src="f8.jpg" width="115" height="110" alt="friend 8" class="img-thumbnail">
+                </div>
+                <div class="col-md-4"  id="r">
+                  <img src="f9.jpg" width="115" height="110" alt="friend 9" class="img-thumbnail">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div id="right-side">
+              <!-- Post form -->
+              <ul class="nav nav-tabs" id="fb-post-tab">
+                <li role="presentation" class="active"><a href="#"  id="first"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Status</a></li>
+                <li role="presentation"><a href="#"><span class="glyphicon glyphicon-camera" aria-hidden="true"></span> Photo/Video</a></li>
+                <li role="presentation"><a href="#"><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Life Event</a></li>
+              </ul>
+              <textarea class="form-control" rows="3" id="post-form" placeholder="What's on your mind?"></textarea>
+              <div class="btn-group" role="group" id="bottom-post-menu">
+                <button type="button" class="btn btn-default" id="bottom-post-menu1"><span class="glyphicon glyphicon-camera" aria-hidden="true"></span></button>
+                <button type="button" class="btn btn-default" id="bottom-post-menu2"><span class="glyphicon glyphicon-user" aria-hidden="true"></button>
+                <button type="button" class="btn btn-default" id="bottom-post-menu3"><span class="glyphicon glyphicon-flash" aria-hidden="true"></button>
+                <button type="button" class="btn btn-default" id="bottom-post-menu4"><span class="glyphicon glyphicon-home" aria-hidden="true"></button>
+                <button type="button" class="btn btn-default" id="bottom-post-menu5"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></button>
+              </div>
+              <button type="button" class="btn btn-default btn-sm" id="post"><b>Post</b></button>
+              <button type="button" class="btn btn-default btn-sm" id="bottom-post-menu6"><b>Friends</b></button>
+              <!-- post 1 -->
+              <div id="post1">
+                <img src="profile-pic.jpg" width="50px" height="50px" alt="profile-pic" class="img-thumbnail" id="post-thumb">
+                <!-- name, time, location -->
+                <h2><a href="#">Tonya Jiang</a><small>June 2 at 3:04pm The Getty</small></h2>
+                <img src="post.jpg" alt="..." class="img-thumbnail" id="post-pic">
+                <hr>
+                <div class="row">
+                  <div class="col-md-8">
+                    <!-- options for each post -->
+                    <ul id="LCS">
+                      <li><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like</li>
+                      <li><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Comment</li>
+                      <li><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> Share</li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- comments and likes -->
+                <div id="comments">
+                <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true" id="liked"></span>
+                <p id="whoLiked"><a>Hanna Batchelor and 4 others</a></p>
+                <hr class="hr2">
+                <div class="comment1">
+                  <img src="kris.jpg" width="40px" height="40px" alt="Kris" class="img-thumbnail" id="comment-thumb">
+                <div class="x">
+                  <p><b><a href="#">Kristyn Riley</a></b> Looks Beautiful!</p>
+                  <p id="like-reply"><a>Like</a><a>  Reply</a><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true" id="liked"></span><a>1</a></p>
+                </div>
+                </div>
+                <div id="comment2">
+                  <img src="jd.jpg" width="40px" height="40px" alt="Julie" class="img-thumbnail">
+                  <div class="x">
+                    <p><b><a href="#">Julie Delano</a></b> Miss you ton</p>
+                    <p id="like-reply"><a>Like</a><a>  Reply</a><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true" id="liked"></span><a>4</a></p>
+                  </div>
+                </div>
+                <!-- add a comment -->
+                <div id="comment-form">
+                  <img src="profile-pic.jpg" width="40px" height="40px" alt="me" class="img-thumbnail">
+                  <input class="form-control " type="text" placeholder="Write a comment...">
+                </div>
+              </div>
+            </div>
+            <!-- post 2 -->
+            <!-- internal is the same as the first post -->
+            <div id="post2">
+              <img src="profile-pic.jpg" width="50px" height="50px" alt="profile-pic" class="img-thumbnail" id="post-thumb2">
+              <h2><a href="#">Tonya Jiang</a><small>May 20 at 9:04am Londonderry, NH</small></h2>
+              <p class="content">Thanks for all the birthday wishes!</p>
+              <hr>
+              <div class="row">
+                <div class="col-md-8">
+                  <ul class="LCS2">
+                    <li><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like</li>
+                    <li><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Comment</li>
+                    <li><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> Share</li>
                   </ul>
-                  <textarea class="form-control" rows="3" id="post-form" placeholder="What's on your mind?"></textarea>
-                  <div class="btn-group" role="group" id="bottom-post-menu">
-                    <button type="button" class="btn btn-default" id="bottom-post-menu1"><span class="glyphicon glyphicon-camera" aria-hidden="true"></span></button>
-                    <button type="button" class="btn btn-default" id="bottom-post-menu2"><span class="glyphicon glyphicon-user" aria-hidden="true"></button>
-                    <button type="button" class="btn btn-default" id="bottom-post-menu3"><span class="glyphicon glyphicon-flash" aria-hidden="true"></button>
-                    <button type="button" class="btn btn-default" id="bottom-post-menu4"><span class="glyphicon glyphicon-home" aria-hidden="true"></button>
-                    <button type="button" class="btn btn-default" id="bottom-post-menu5"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></button>
-                  </div>
-                  <button type="button" class="btn btn-default btn-sm" id="post"><b>Post</b></button>
-                  <button type="button" class="btn btn-default btn-sm" id="bottom-post-menu6"><b>Friends</b></button>
-                  <div id="post1">
-                    <img src="http:placehold.it/50" alt="..." class="img-thumbnail" id="post-thumb">
-                    <h2><a href="#">Name</a><small>November 11 at 3:04pm Location</small></h2>
-                    <img src="http:placehold.it/485x400" alt="..." class="img-thumbnail" id="post-pic">
-                  <hr>
-                  <div class="row">
-                    <div class="col-md-8">
-                      <ul id="LCS">
-                        <li><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like</li>
-                        <li><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Comment</li>
-                        <li><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> Share</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div id="comments">
+                  <div id="commentsP2">
                     <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true" id="liked"></span>
-                    <p><a>Someone and ## others</a></p>
-                    <hr id="hr2">
-                    <div id="comment1">
-                      <img src="http:placehold.it/40" alt="..." class="img-thumbnail" id="comment-thumb">
-                    <div id="x">
-                      <p><b><a href="#">Name</a></b> Comment comment comment</p>
-                      <p id="like-reply"><a>Like</a><a>  Reply</a><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true" id="liked"></span><a>1</a></p>
+                    <p><a>Gabby Feig and 21 others</a></p>
+                  </div>
+                  <hr class="hr2">
+                  <div class="comment1">
+                    <img src="mom.jpg" width="40px" height="40px" alt="mom" class="img-thumbnail" id="comment-thumb">
+                    <div class="x">
+                      <p><b><a href="#">Mom</a></b> Love you!</p>
+                      <p class="like-reply"><a>Like</a><a>  Reply</a><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true" id="liked"></span><a>1</a></p>
                     </div>
-                    </div>
-                    <div id="comment2">
-                      <img src="http:placehold.it/40" alt="..." class="img-thumbnail">
-                      <div id="x">
-                        <p><b><a href="#">Name</a></b> Comment comment comment</p>
-                        <p id="like-reply"><a>Like</a><a>  Reply</a><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true" id="liked"></span><a>4</a></p>
-                      </div>
-                    </div>
-                    <div id="comment-form">
-                      <img src="http:placehold.it/40" alt="..." class="img-thumbnail">
+                    <div class="comment-form2">
+                      <img src="profile-pic.jpg" width="40px" height="40px" alt="me" class="img-thumbnail">
                       <input class="form-control " type="text" placeholder="Write a comment...">
                     </div>
                   </div>
                 </div>
               </div>
+          </div>
+          <!-- post 3 -->
+          <div id="post3">
+            <img src="profile-pic.jpg" width="50px" height="50px" alt="profile-pic" class="img-thumbnail" id="post-thumb2">
+            <h2><a href="#">Tonya Jiang</a><small>April 11 at 2:54pm Londonderry, NH</small></h2>
+            <p class="content">Happy to say I'm going to Washington University in St. Louis!</p>
+            <hr>
+            <div class="row">
+            <div class="col-md-8">
+              <ul class="LCS2">
+                <li><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like</li>
+                <li><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Comment</li>
+                <li><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> Share</li>
+              </ul>
+              <div id="commentsP3">
+                <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true" id="liked"></span>
+                <p><a>Beckie Walker and 63 others</a></p>
+              </div>
+              <hr class="hr2">
+              <div class="comment1">
+                <img src="emcase.jpg" width="40px" height="40px" alt="Emily" class="img-thumbnail" id="comment-thumb">
+                <div class="x">
+                  <p><b><a href="#">Emily Casey</a></b> Congrats!!! </p>
+                  <p class="like-reply"><a>Like</a><a>  Reply</a><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true" id="liked"></span><a>2</a></p>
+                </div>
+                <div class="comment-form2">
+                  <img src="profile-pic.jpg" width="40px" height="40px" alt="me" class="img-thumbnail">
+                  <input class="form-control " type="text" placeholder="Write a comment...">
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        </div>
       </div>
-    <div class="col-md-2">.col-md-3</div>
+    </div>
   </div>
 </div>
-
+    <!-- advertisments -->
+    <div class="col-md-2" id="promos">
+      <h3 id="sponsored">Sponsored</h3>
+      <img src="ad1.png" width="150px" height="80px" alt="..." class="img-thumbnail" id="ad-pic">
+      <div id="ad-writing"><h6>Custom Holiday Card Sale!</h6><a href="#">www.papersource.com</a><p>Get 30% off when you order personalized holiday cards before November 6.</p></div>
+      <img src="ad2.png" width="150px" height="80px" alt="..." class="img-thumbnail" id="ad-pic">
+      <div id="ad-writing"><h6>Get a Quote Today</h6><a href="#">statefarm.com</a><p>Save money on your car insurance. Talk to an agent. </p></div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
